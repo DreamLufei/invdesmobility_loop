@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invdesmobility"
+version = "0.1.0"
+description = "Orchestrate invDesMobility top10 CIF ingestion into 2d-mobility batch runs."
+requires-python = ">=3.11"
+dependencies = [
+  "python-dotenv>=1,<2",
+  "pymatgen>=2024,<2027",
+  "pymongo>=4.6,<5",
+  "requests>=2.31,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=9,<10",
+]
+
+[project.scripts]
+invdesmobility = "invdesmobility.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["invdesmobility*"]

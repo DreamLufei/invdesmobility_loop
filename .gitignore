@@ -1,0 +1,31 @@
+__pycache__/
+.pytest_cache/
+runs/
+.env
+.env.*
+
+# VASP and high-throughput raw outputs belong in local run directories or a
+# separate data archive, not in the public bridge-code repository.
+POTCAR
+POTCAR.*
+WAVECAR
+WAVECAR.*
+CHGCAR
+CHGCAR.*
+CHG
+CHG.*
+vasprun.xml
+vaspout.h5
+OUTCAR
+EIGENVAL
+DOSCAR
+PROCAR
+IBZKPT
+OSZICAR
+XDATCAR
+PCDAT
+REPORT
+*.tar
+*.tar.gz
+*.tgz
+*.zip
